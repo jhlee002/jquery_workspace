@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery연습문제01</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#text1').css('background-color', 'beige');
+      $('.innerText').animate({top:'-50px'});
+
+
+      // 1번 문제
+      $('#btn1').click(function(){
+        $('body').css('background-color', 'green');
+      });
+
+      // 2번 문제
+      $('#btn2').click(function(){
+        $('#fox').animate({left:'500px'},'slow');
+      });
+
+      // 3번 문제
+      $('#section1').click(function(){
+        // $('#section1').css('background-color', '#ccc');
+        $('#text1').slideToggle();
+      });
+
+      // 4번 문제
+      $('#content1').on({
+        mouseenter: function(){
+          $('.inner1').animate({top:'-255px'});
+        },
+        mouseleave: function(){
+          $('.inner1').animate({top:'-50px'});
+        }
+      });
+      $('#content2').on({
+        mouseenter: function(){
+          $('.inner2').animate({top:'-255px'});
+        },
+        mouseleave: function(){
+          $('.inner2').animate({top:'-50px'});
+        }
+      });
+      $('#content3').on({
+        mouseenter: function(){
+          $('.inner3').animate({top:'-255px'});
+        },
+        mouseleave: function(){
+          $('.inner3').animate({top:'-50px'});
+        }
+      });
+      $('#content4').on({
+        mouseenter: function(){
+          $('.inner4').animate({top:'-255px'});
+        },
+        mouseleave: function(){
+          $('.inner4').animate({top:'-50px'});
+        }
+      });
+
+    });
+  </script>
+
+  <style>
+    * {padding:0; margin:0;}
+
+    #fox{width:400px;height:250px;position:relative;}
+
+    #section1{width:700px;height:40px;background-color:burlywood;}
+
+    .box{
+      width:700px;
+      height:40px;
+    }
+
+    #hotTopic{
+      position:relative;
+      display:flex;
+      width: 1000px;
+      height: 600px;
+      margin-bottom:-50px;
+    }
+
+    .content{
+      width:300px;
+      height:250px;
+      /* border:1px solid black; */
+      margin-right: 70px;
+
+    }
+
+    img{
+      width:300px;
+      height:250px;
+    }
+
+    .innerText{
+      position:relative;
+      background-color:#ccc;
+      opacity:0.5;
+    }
+  </style>
+
+</head>
+<body>
+  <button id="btn1">배경색 변경</button>
+
+  <br><br>
+
+  <button id="btn2">이미지 이동</button>
+
+  <br><br>
+
+  <img src="/img/pic_fox.jpg" alt="fox" id="fox">
+
+  <br><br>
+
+  <div id="section1" class="box">Section1
+    <p id="text1" class="box">text1</p>
+  </div>
+
+  <br><br>
+
+  <div id="hotTopic">
+    <div id="content1" class="content">
+      <img src="/img/aurora.jpg" alt="aurora">
+      <div class="content innerText inner1">내용1</div>
+    </div>
+    <div id="content2" class="content">
+      <img src="/img/lake_winter.jpg" alt="lake_winter">
+      <div class="content innerText inner2">내용2</div>
+    </div>
+    <div id="content3" class="content">
+      <img src="/img/cliff.jpg" alt="cliff">
+      <div class="content innerText inner3">내용3</div>
+    </div>
+    <div id="content4" class="content">
+      <img src="/img/path_mountain.jpg" alt="path_mountain">
+      <div class="content innerText inner4">내용4</div>
+    </div>
+  </div>
+
+</body>
+</html>

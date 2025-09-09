@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jquery연습03</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // jQuery get
+      console.log($('h1').text()); // getter
+      console.log($('h1').html()); // getter . html()은 태그도 출력한다.
+
+      // jQuery set
+      $('h1').text('<i>제이쿼리</i>');  // setter . text(parameter)는 태그를 글자로 인식한다.
+      $('h1').html('<i>제이쿼리</i>');  // setter . html(parameter)는 태그를 인식한다.
+      
+      // jQuery value
+      $('input').val('홍길동'); // setter
+
+      $('#btn1').click(function(){
+        console.log($('input').val()); // getter
+      });
+
+    });
+  </script>
+</head>
+<body>
+  <h1><b>jQuery</b></h1>
+
+  <input name="name" placeholder="name"><button id="btn1">등록</button>
+</body>
+</html>
