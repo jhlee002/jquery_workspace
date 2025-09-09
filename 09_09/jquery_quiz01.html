@@ -19,6 +19,7 @@
       // 2번 문제
       $('#btn2').click(function(){
         $('#fox').animate({left:'500px'},'slow');
+        // $('#fox').animate({left:'0px'},'slow');
       });
 
       // 3번 문제
@@ -31,33 +32,41 @@
       $('#content1').on({
         mouseenter: function(){
           $('.inner1').animate({top:'-255px'});
+          $('.inner1').text('요약1');
         },
         mouseleave: function(){
           $('.inner1').animate({top:'-50px'});
+          $('.inner1').text('내용1');
         }
       });
       $('#content2').on({
         mouseenter: function(){
           $('.inner2').animate({top:'-255px'});
+          $('.inner2').text('요약2');
         },
         mouseleave: function(){
           $('.inner2').animate({top:'-50px'});
+          $('.inner2').text('내용2');
         }
       });
       $('#content3').on({
         mouseenter: function(){
           $('.inner3').animate({top:'-255px'});
+          $('.inner3').text('요약3');
         },
         mouseleave: function(){
           $('.inner3').animate({top:'-50px'});
+          $('.inner3').text('내용3');
         }
       });
       $('#content4').on({
         mouseenter: function(){
           $('.inner4').animate({top:'-255px'});
+          $('.inner4').text('요약4');
         },
         mouseleave: function(){
           $('.inner4').animate({top:'-50px'});
+          $('.inner4').text('내용4');
         }
       });
 
@@ -85,6 +94,7 @@
     }
 
     .content{
+      /* position:relative; */
       width:300px;
       height:250px;
       /* border:1px solid black; */
