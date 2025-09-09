@@ -8,7 +8,7 @@
   <script>
     $(document).ready(function(){
       // jQuery get
-      console.log($('h1').text()); // getter
+      console.log($('h1').text()); // getter - 해당 요소에서 값을 가져옴. text()/html()/val()안에 매개변수가 없음.
       console.log($('h1').html()); // getter . html()은 태그도 출력한다.
 
       // jQuery set
@@ -16,7 +16,7 @@
       $('h1').html('<i>제이쿼리</i>');  // setter . html(parameter)는 태그를 인식한다.
       
       // jQuery value
-      $('input').val('홍길동'); // setter
+      $('input').val('홍길동'); // setter - 해당 요소에 미리 입력값을 넣어줌. text()/html()/val()안에 매개변수/값(가)이 있음.
 
       $('#btn1').click(function(){
         console.log($('input').val()); // getter
