@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jquery연습</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    // 문서가 준비되면 실행
+    $(document).ready(function(){
+      //버튼을 click했을 때 실행
+
+      $("button").click(function(){
+        //p태그를 안보이게
+        $("p").hide();
+      });
+
+      //p태그를 더블클릭했을 때 실행
+      $("p").dblclick(function(){
+        //더블클릭한 p태그를 안보이게
+        $(this).hide();
+      });
+
+      //p태그에 마우스가 올라갔을 때 실행
+      // $("p").mouseenter(function(){
+      //   $(this).hide();
+      // });
+
+      //p태그에 마우스가 나갔을 때 실행
+      // $("p").mouseleave(function(){
+      //   $(this).hide();
+      // });
+
+      //p태그에 마우스버튼(왼쪽,오른쪽모두)을 클릭하는 순간 실행
+      // $("p").mousedown(function(){
+      //   $(this).hide();
+      // });
+
+      //p태그에서 마우스버튼을 클릭했다가 떼는 순간 실행
+      // $("p").mouseup(function(){
+      //   $(this).hide();
+      // });
+
+      //p태그에서 hover시 실행
+      // $("p").hover(
+      //   // mouseenter시
+      //   function(){
+      //     $(this).hide();
+      //   },
+      //   // mouseleave시
+      //   function(){
+      //     $(this).show();
+      //   }
+      // );
+
+      // input태그에 focus가 갔을 때
+      $("input").focus(function(){
+        //배경색 변경
+        $(this).css("background-color","yellow");
+      });
+
+      // input태그에 focus가 벗어났을 때
+      $("input").blur(function(){
+        //배경색 변경
+        $(this).css("background-color","white");
+      });
+
+
+      // on메서드로 여러 이벤트 처리
+      $("p").on({
+        mouseenter:function(){
+          $(this).css("background-color","yellow");
+        },
+        mouseleave:function(){
+          $(this).css("background-color","blue");
+        },
+        click:function(){
+          $(this).css("background-color","red");
+        }   
+      });
+
+
+      
+
+    });
+  </script>
+  
+</head>
+<body>
+  <h1>jquery연습</h1>
+  <p>jquery</p>
+  <p>jquery</p>
+  <button id="btn">버튼</button>
+
+  <br>
+
+  <input type="text" name="name">
+
+</body>
+</html>
