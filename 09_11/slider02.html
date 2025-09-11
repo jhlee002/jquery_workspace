@@ -75,11 +75,11 @@
                 $('.slider_panel img').eq(prevIndex).css("z-index",-500); // 표시되고 있던 이미지 (직전의 이미지)
                 $('.slider_panel img').eq(index).css("z-index",1000);   // 제일 앞으로 보낼 이미지 (z-index: 1000)
                 if(prevIndex>index){
-                    $('.slider_panel img').eq(index).css("left","-600px");
-                    $('.slider_panel img').eq(index).animate({left:0},500,"linear",null);                    
+                    $('.slider_panel img').eq(index).css("left","-600px");  // 선택한 인덱스의 이미지를 미리 화면 바깥쪽의 왼쪽에 위치시킴.
+                    $('.slider_panel img').eq(index).animate({left:0},500,"linear",null);   // 위치시킨 이미지를 오른쪽으로 이동시킴.                    
                 }else{
-                    $('.slider_panel img').eq(index).css("left","600px");
-                    $('.slider_panel img').eq(index).animate({left:0},500,"linear",null);
+                    $('.slider_panel img').eq(index).css("left","600px");   // 선택한 인덱스의 이미지를 미리 오른쪽에 위치시킴.
+                    $('.slider_panel img').eq(index).animate({left:0},500,"linear",null);   // 위치시킨 이미지를 왼쪽으로 이동시킴.
                 }
                 prevIndex=index;    // 현재 index를 prevIndex에  미리 저장
 
