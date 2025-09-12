@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>addClass, removeClass, toggleClass</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  /* jQuery를 이용할 때 필수 */
   <style>
     .title{
       color:red;
@@ -13,13 +13,13 @@
   </style>
   <script>
     $(function(){
-      $("button").eq(0).click(function(){
+      $("button").eq(0).click(function(){ // <button> 중 첫 번째 것을 선택
         $("h1").addClass("title");     
       });
-      $("button").eq(1).click(function(){
+      $("button").eq(1).click(function(){ // <button> 중 두 번째 것을 선택
         $("h1").removeClass("title");     
       });
-      $("button").eq(2).click(function(){
+      $("button").eq(2).click(function(){ // <button> 중 세 번째 것을 선택
         $("h1").toggleClass("title");     
       });
 

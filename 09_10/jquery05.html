@@ -22,11 +22,11 @@
 
         console.log($("#div1").width());
         console.log($("#div1").height());
-        console.log($("#div1").innerWidth());
+        console.log($("#div1").innerWidth()); // width(content영역)에 padding을 더한 값
         console.log($("#div1").innerHeight());
-        console.log($("#div1").outerWidth());
+        console.log($("#div1").outerWidth()); // width에 padding과 border를 더한 값 
         console.log($("#div1").outerHeight());
-        console.log($("#div1").outerWidth(true));
+        console.log($("#div1").outerWidth(true)); // width에 padding과 border, margin을 더한 값
         console.log($("#div1").outerHeight(true));
         
       });
